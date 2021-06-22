@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\기타">
+      <UniqueIdentifier>{8cb1596d-8997-4968-8884-60956924b0e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\세그먼트">
+      <UniqueIdentifier>{1cd9d5da-c3bd-41a2-be08-900cce689f61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\대화상자">
+      <UniqueIdentifier>{a01d4ae3-8907-4b60-9db1-37e20aa7afc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기타">
+      <UniqueIdentifier>{ac822be8-dc78-4e2c-8eec-310c1e495748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\세그먼트">
+      <UniqueIdentifier>{4868847f-41c0-4436-9a5c-3e8e77764b56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\대화상자">
+      <UniqueIdentifier>{938c176c-872d-4ec4-8f50-9f76001217e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\부수 상자">
+      <UniqueIdentifier>{3a3a1e32-1388-403a-97ab-4bbd07b99117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\부수 상자">
+      <UniqueIdentifier>{266aac79-3e90-4daa-94b5-748f465db54c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="Weight Ckeck.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="CMainDialog.h">
+      <Filter>헤더 파일\대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CFigureDlg.h">
+      <Filter>헤더 파일\대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CFigureSegm.h">
+      <Filter>헤더 파일\세그먼트</Filter>
+    </ClInclude>
+    <ClInclude Include="MrDoubleFormat.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="CBasicClasses.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="CStandardDlg.h">
+      <Filter>헤더 파일\대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CStandardSegm.h">
+      <Filter>헤더 파일\세그먼트</Filter>
+    </ClInclude>
+    <ClInclude Include="CGdiPlusBitmap.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageDialog.h">
+      <Filter>헤더 파일\부수 상자</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionDialog.h">
+      <Filter>헤더 파일\부수 상자</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Weight Ckeck.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="CMainDialog.cpp">
+      <Filter>소스 파일\대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="CFigureDlg.cpp">
+      <Filter>소스 파일\대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="CFigureSegm.cpp">
+      <Filter>소스 파일\세그먼트</Filter>
+    </ClCompile>
+    <ClCompile Include="MrDoubleFormat.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="CBasicClasses.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="CStandardDlg.cpp">
+      <Filter>소스 파일\대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="CStandardSegm.cpp">
+      <Filter>소스 파일\세그먼트</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageDialog.cpp">
+      <Filter>소스 파일\부수 상자</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionDialog.cpp">
+      <Filter>소스 파일\부수 상자</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WeightCkeck.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\WeightCkeck.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Weight Ckeck.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\idr_main.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap_b.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00001.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00002.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00003.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00004.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00005.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00006.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00007.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00008.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00009.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00010.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00011.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap10.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap11.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap12.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap13.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap14.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\tank.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\standard.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\figure_t.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\1.철과 강.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\2.동과 동합금.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\금속 비중표.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\원소별 비중표.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\철동 합친 거.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

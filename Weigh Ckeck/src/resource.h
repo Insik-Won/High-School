@@ -1,0 +1,123 @@
+﻿//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++에서 생성한 포함 파일입니다.
+// WeightCkeck.rc에서 사용되고 있습니다.
+//
+#define IDS_FN_PLATE                    130
+#define IDS_FN_SHELL                    131
+#define IDS_FN_RoundBar                 132
+#define IDB_FIGURE_PLATE                132
+#define IDD_Dialog_Help                 132
+#define IDS_FN_DONUT                    133
+#define IDB_FIGURE_DONUT                133
+#define IDD_Dialog_Option               133
+#define IDS_FN_CIRCLE                   134
+#define IDB_FIGURE_CIRCLE               134
+#define IDS_FN_PIPE                     135
+#define IDB_FIGURE_PIPE                 135
+#define IDS_FN_TRAPEZOID                136
+#define IDS_FN_SECTOR                   137
+#define IDB_FIGURE_SECTOR               137
+#define IDS_FN_HEAD                     138
+#define IDB_FIGURE_HEAD                 138
+#define IDB_STANDARD_ANGLE              139
+#define IDS_FN_CONE                     139
+#define IDD_Dialog_SecureWarning        139
+#define IDS_STRING140                   140
+#define IDB_FIGURE_SHELL                142
+#define IDB_FIGURE_RoundBar             143
+#define IDR_MAINFRAME                   144
+#define IDD_Dialog_Image                144
+#define IDR_METAL                       148
+#define IDD_Main_Dialog                 149
+#define IDR_ELEMENT                     149
+#define IDD_Nozzle_Length_Ckeck         150
+#define IDD_FIGURE                      150
+#define IDD_Dialog_Figure               150
+#define IDD_FIGURE1                     151
+#define IDD_Figure_Segm                 151
+#define IDD_Segm_Figure                 151
+#define IDR_SteelCopper                 151
+#define IDD_Segm_Standard               152
+#define IDR_Menu                        152
+#define IDD_Dialog_Standard             157
+#define IDS_SN_ANGLE1                   241
+#define IDS_SN_ANGLE2                   242
+#define IDS_SN_CHANNEL                  243
+#define IDS_SN_HBEAM                    244
+#define IDS_SN_IBEAM                    245
+#define IDS_SN_BOLT1                    246
+#define IDS_SN_NUT1                     247
+#define IDS_JPG_SteelCopper             341
+#define IDS_JPG_METAL                   342
+#define IDS_JPG_ELEMENT                 343
+#define IDC_Radio_Shell                 1000
+#define IDC_Button_Reset                1000
+#define IDC_Radio_AppOval               1001
+#define IDC_Radio_RghtOval              1002
+#define IDC_Icon                        1003
+#define IDC_Edit_Shell_ID               1004
+#define IDC_Check_Ves_CL_0              1005
+#define IDC_Edit_Result                 1005
+#define IDC_Edit_Shell_THK              1006
+#define IDC_Edit_1                      1006
+#define IDC_Edit_Shell_Rad              1007
+#define IDC_Edit_2                      1007
+#define IDC_Edit_Head_THK               1008
+#define IDC_Edit_3                      1008
+#define IDC_Combo_Pipe_Size             1009
+#define IDC_Edit_4                      1009
+#define IDC_Combo_digit                 1009
+#define IDC_Button_Calc                 1010
+#define IDC_Edit_SpGravity              1010
+#define IDB_FIGURE_TRAPEZOID            1010
+#define IDC_Edit_x_Dstnce               1011
+#define IDC_Static_Name                 1011
+#define IDB_STANDARD_CHANNEL            1011
+#define IDC_Edit_Y_Dstnce               1012
+#define IDC_Combo_Standard              1012
+#define IDC_Edit_Ves_CL_TO              1013
+#define IDB_STANDARD_HBEAM              1013
+#define IDC_Edit_Noz_Proj               1014
+#define IDB_STANDARD_IBEAM              1014
+#define IDC_Edit_Num                    1014
+#define IDC_Edit_Noz_Size               1015
+#define IDB_STANDARD_BOLT1              1015
+#define IDC_Combo_Img                   1015
+#define IDC_Button_ImgOn                1016
+#define IDC_STATIC2                     1017
+#define IDC_Combo_SpGrvty               1017
+#define IDC_STATIC3                     1018
+#define IDB_STANDARD_NUT1               1018
+#define IDC_Static_Asterisk             1018
+#define IDC_STATIC4                     1019
+#define IDB_FIGURE_CONE                 1019
+#define IDC_Static_L1                   1020
+#define IDC_EDIT6                       1020
+#define IDC_Static_L3                   1021
+#define IDC_EDIT7                       1021
+#define IDC_Static_L2                   1022
+#define IDC_EDIT8                       1022
+#define IDC_Static_L4                   1023
+#define IDC_EDIT9                       1023
+#define IDC_L1_Rr                       1024
+#define IDC_EDIT10                      1024
+#define IDC_L2_Rr                       1025
+#define IDC_Edit_Password               1026
+#define IDC_Static_CurFileDir           1029
+#define IDC_Tab_Main                    1030
+#define ID_32771                        32771
+#define ID_32772                        32772
+#define ID_MnItem_Option                32773
+#define ID_MnItem_About                 32774
+#define ID_MnItem_Help                  32775
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        153
+#define _APS_NEXT_COMMAND_VALUE         32776
+#define _APS_NEXT_CONTROL_VALUE         1019
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif
