@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\기타">
+      <UniqueIdentifier>{9090ab91-2770-42cf-930c-df8fa61a3918}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기타">
+      <UniqueIdentifier>{fd8c7fad-50a8-4c14-a4e6-c2e69e3daf4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\계산기">
+      <UniqueIdentifier>{cf4f9838-424e-4dc0-91ba-cd2b7d4dd5e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\계산기">
+      <UniqueIdentifier>{b4a4baaf-d103-4859-8ccf-91b5c05ae8b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\메인 대화상자">
+      <UniqueIdentifier>{77856c36-f2ab-448c-9620-b6842849d8ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\부수 대화상자">
+      <UniqueIdentifier>{ed73bae4-8ac3-4192-b1fe-5ab892482a86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\메인 대화상자">
+      <UniqueIdentifier>{51803d51-75a4-4e35-84b4-1d557a271ab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\부수 대화상자">
+      <UniqueIdentifier>{675921d2-23df-4484-b2c1-fec623112b39}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Calc Ckeck.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="MrDoubleFormat.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseCalculator.h">
+      <Filter>헤더 파일\계산기</Filter>
+    </ClInclude>
+    <ClInclude Include="CNozzCalculator.h">
+      <Filter>헤더 파일\계산기</Filter>
+    </ClInclude>
+    <ClInclude Include="CClipCalculator.h">
+      <Filter>헤더 파일\계산기</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseCalcDialog.h">
+      <Filter>헤더 파일\메인 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CCalcDialog.h">
+      <Filter>헤더 파일\메인 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CClipDlg.h">
+      <Filter>헤더 파일\메인 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CMainDialog.h">
+      <Filter>헤더 파일\메인 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CNozzleDlg.h">
+      <Filter>헤더 파일\메인 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageDialog.h">
+      <Filter>헤더 파일\부수 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpDialog.h">
+      <Filter>헤더 파일\부수 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionDialog.h">
+      <Filter>헤더 파일\부수 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="SecureWarningDlg.h">
+      <Filter>헤더 파일\부수 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CGdiPlusBitmap.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="Calc Ckeck.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseCalculator.cpp">
+      <Filter>소스 파일\계산기</Filter>
+    </ClCompile>
+    <ClCompile Include="MrDoubleFormat.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="CNozzCalculator.cpp">
+      <Filter>소스 파일\계산기</Filter>
+    </ClCompile>
+    <ClCompile Include="CClipCalculator.cpp">
+      <Filter>소스 파일\계산기</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseCalcDialog.cpp">
+      <Filter>소스 파일\메인 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="CMainDialog.cpp">
+      <Filter>소스 파일\메인 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="CNozzleDlg.cpp">
+      <Filter>소스 파일\메인 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="CClipDlg.cpp">
+      <Filter>소스 파일\메인 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="CCalcDialog.cpp">
+      <Filter>소스 파일\메인 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpDialog.cpp">
+      <Filter>소스 파일\부수 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageDialog.cpp">
+      <Filter>소스 파일\부수 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionDialog.cpp">
+      <Filter>소스 파일\부수 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="SecureWarningDlg.cpp">
+      <Filter>소스 파일\부수 대화상자</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CalcCkeck.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\CalcCkeck.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\rcdata5.bin">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Calc Ckeck.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Nozzle Length Ckeck.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\NOZZLE.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\CLIP1.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\CLIP2.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\NOZZLE.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\CLIP1.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\CLIP2.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bitmap_b.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00001.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00002.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00003.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00004.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00005.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00006.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00007.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00008.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00009.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00010.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bmp00011.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\NOZZLE1.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\NOZZLE2.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\CLIP 일반.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\CLIP 위쪽.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\CLIP 위쪽 +PAD.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\CLIP 중앙 +PAD.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\CLIP 중앙.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\PIPE I.D.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\PIPE TH%27K.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
