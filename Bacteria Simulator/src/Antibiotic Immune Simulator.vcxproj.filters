@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\기타">
+      <UniqueIdentifier>{ba0a5390-152b-4828-a517-dcd0a2931923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\대화상자">
+      <UniqueIdentifier>{ffe9a887-4052-4e3d-88e2-2f6630409083}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\대화상자">
+      <UniqueIdentifier>{78b46308-fcb0-4220-98a6-1f71df863ca5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기타">
+      <UniqueIdentifier>{8c6c8652-bc0c-4ff2-b6ce-9fd059d40099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\세균">
+      <UniqueIdentifier>{5e7d8f20-9a05-4df2-ad09-668339d461d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\부수 대화상자">
+      <UniqueIdentifier>{67080a8b-b0ef-4dce-9c9b-2db5b5d2c6ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\부수 대화상자">
+      <UniqueIdentifier>{73f758d0-32a3-49a5-8da1-065e4ca09aca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\세균">
+      <UniqueIdentifier>{595c7c17-47f1-4698-8a2d-79ff85344212}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Antibiotic Immune Simulator.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="CMainDlg.h">
+      <Filter>헤더 파일\대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="CSimulDlg.h">
+      <Filter>헤더 파일\대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CGraphDlg.h">
+      <Filter>헤더 파일\대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="BufferDC.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="CBacteria.h">
+      <Filter>헤더 파일\세균</Filter>
+    </ClInclude>
+    <ClInclude Include="CSumDlg.h">
+      <Filter>헤더 파일\부수 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="COptionDlg.h">
+      <Filter>헤더 파일\부수 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="MrDoubleFormat.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="Antibiotic Immune Simulator.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="CMainDlg.cpp">
+      <Filter>소스 파일\대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="CSimulDlg.cpp">
+      <Filter>소스 파일\대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="CGraphDlg.cpp">
+      <Filter>소스 파일\대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="BufferDC.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="CBacteria.cpp">
+      <Filter>소스 파일\세균</Filter>
+    </ClCompile>
+    <ClCompile Include="CSumDlg.cpp">
+      <Filter>소스 파일\부수 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="COptionDlg.cpp">
+      <Filter>소스 파일\부수 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="MrDoubleFormat.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AntibioticImmuneSimulator.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\AntibioticImmuneSimulator.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Antibiotic Immune Simulator.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\bacteria.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
