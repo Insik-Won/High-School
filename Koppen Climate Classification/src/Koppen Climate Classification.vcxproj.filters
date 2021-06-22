@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\기타">
+      <UniqueIdentifier>{bf06ffca-fca8-4937-853a-2509d880495b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\대화상자">
+      <UniqueIdentifier>{2db530fb-5449-4b84-8c28-b0bf143300f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\기타">
+      <UniqueIdentifier>{087b1050-c51f-4913-868f-c534d22eea48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\대화상자">
+      <UniqueIdentifier>{179492e0-8b59-4631-bb5d-3822e6b079dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\부수 대화상자">
+      <UniqueIdentifier>{c396235b-458a-48ff-a57d-e6fdeb42f6bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\부수 대화상자">
+      <UniqueIdentifier>{2bc52add-58da-41b0-9fc9-e36e4b4b6711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\커스텀 컨트롤">
+      <UniqueIdentifier>{3e37dea8-d180-422e-b360-0ec8f03d0b12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\커스텀 컨트롤">
+      <UniqueIdentifier>{3d1565f9-a454-4b38-a70e-6ae062f9ed1c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Koppen Climate Classification.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="BufferDC.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="MrWindows.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="CMainDlg.h">
+      <Filter>헤더 파일\대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CGeoGraphDlg.h">
+      <Filter>헤더 파일\대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CKoppenCalculator.h">
+      <Filter>헤더 파일\기타</Filter>
+    </ClInclude>
+    <ClInclude Include="CMrStatic.h">
+      <Filter>헤더 파일\커스텀 컨트롤</Filter>
+    </ClInclude>
+    <ClInclude Include="CKoppenIconWnd.h">
+      <Filter>헤더 파일\커스텀 컨트롤</Filter>
+    </ClInclude>
+    <ClInclude Include="CKoppenOptionDlg.h">
+      <Filter>헤더 파일\부수 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="COption1Dlg.h">
+      <Filter>헤더 파일\부수 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="COption2Dlg.h">
+      <Filter>헤더 파일\부수 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="COption3Dlg.h">
+      <Filter>헤더 파일\부수 대화상자</Filter>
+    </ClInclude>
+    <ClInclude Include="CHelpDlg.h">
+      <Filter>헤더 파일\부수 대화상자</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Koppen Climate Classification.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="CMainDlg.cpp">
+      <Filter>소스 파일\대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="BufferDC.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="MrWindows.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="CGeoGraphDlg.cpp">
+      <Filter>소스 파일\대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="CKoppenCalculator.cpp">
+      <Filter>소스 파일\기타</Filter>
+    </ClCompile>
+    <ClCompile Include="CKoppenIconWnd.cpp">
+      <Filter>소스 파일\커스텀 컨트롤</Filter>
+    </ClCompile>
+    <ClCompile Include="CMrStatic.cpp">
+      <Filter>소스 파일\커스텀 컨트롤</Filter>
+    </ClCompile>
+    <ClCompile Include="CKoppenOptionDlg.cpp">
+      <Filter>소스 파일\부수 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="COption1Dlg.cpp">
+      <Filter>소스 파일\부수 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="COption2Dlg.cpp">
+      <Filter>소스 파일\부수 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="COption3Dlg.cpp">
+      <Filter>소스 파일\부수 대화상자</Filter>
+    </ClCompile>
+    <ClCompile Include="CHelpDlg.cpp">
+      <Filter>소스 파일\부수 대화상자</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="KoppenClimateClassification.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\KoppenClimateClassification.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Koppen Climate Classification.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Koppen.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
