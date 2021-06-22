@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\User\Desktop\NOZZLE LENGTH CKECK\Nozzle Length Ckeck.jar</jar>
+  <outfile>C:\Users\User\Desktop\NOZZLE LENGTH CKECK\Nozzle Length Ckeck.exe</outfile>
+  <errTitle>You Need Java. Go to Page</errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\tank_fLw_icon.ico</icon>
+  <classPath>
+    <mainClass>MyJava</mainClass>
+    <cp>.</cp>
+  </classPath>
+  <jre>
+    <path>src\jre1.8.0_241</path>
+    <bundledJre64Bit>true</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.8</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>jdkOnly</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.4.0.1</fileVersion>
+    <txtFileVersion>Ver 1.4.0.1</txtFileVersion>
+    <fileDescription>This is an app for calculating some of Nozzle&apos;s figures</fileDescription>
+    <copyright>Won In Sik (MrWon)</copyright>
+    <productVersion>1.4.0.1</productVersion>
+    <txtProductVersion>Ver 1.4.0.1</txtProductVersion>
+    <productName>Nozzle Lenght Ckeck</productName>
+    <companyName></companyName>
+    <internalName>Nozzle Lenght Ckeck</internalName>
+    <originalFilename>Nozzle Lenght Ckeck.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>KOREAN</language>
+  </versionInfo>
+</launch4jConfig>
