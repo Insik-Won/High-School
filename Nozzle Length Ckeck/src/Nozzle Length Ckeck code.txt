@@ -1,0 +1,673 @@
+import javax.swing.*;
+import javax.swing.border.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.event.*;
+import java.lang.Math;
+import java.io.*;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
+public class LaptopJava extends JFrame implements KeyListener,ActionListener{
+	JFrame f;
+	ImgDialog[] imgD;
+	OptionDialog optD;
+	HelpDialog helpD;
+	JPanel states;
+	JPanel data;
+	JPanel cal;
+	
+	JMenuBar mb;
+	JMenu file,option,help;
+	JMenuItem save,load,opt,hlp;
+	
+	ButtonGroup bg;
+	JRadioButton[] state;
+	
+	JLabel[] lb;
+	JTextField[] tf;
+	String[] name = {"SHELL I.D","Shell TH\'K","NOZZLE SIZE","NOZZLE PROJECTION","X - 거리","VESSEL C.L TO","SHELL Rad","Head TH\'K","PIPE SIZE","Y - 거리"};
+	
+	JComboBox<String> cbb;
+	JCheckBox ckb;
+	String[] inches = {"1/2\"","3/4\"","1\"","1 1/2\"","2\"","3\"","4\"","6\"","8\"","10\"","12\"","14\"","16\"","18\"","20\"","24\""};
+	Double [] mm = {21.34,27.67,33.4,48.26,60.33,88.9,114.3,168.28,219.08,273.05,323.85,355.6,406.4,457.2,508.,609.6};
+	JLabel[] l;
+	JLabel[] l_ex;
+	double temp_ex[] = new double[2];
+	
+	JButton Calc;
+	JButton close;
+	JButton popImage;
+	JComboBox<String> imgChoose;
+	
+	Double digitNum = 10.0;
+	
+	double d,rad,htk,stk,ns,np,vt;
+	
+	double oL[] = {0.0,0.0,0.0,0.0};
+	
+	String Joke[] = {"제대로 입력해주십시오","제대로 입력해주세요","제대로 입력해주세요?","진짜 제대로 입력하는 거 맞아요?","제대로 입력해주세요....","제에에발","영어로 해야 알아들으시나요?","Pleeeease Sir","저 관둘래요","..."};
+	int jk = 0;
+	
+	LaptopJava() {
+		f = new JFrame("NOZZLE LENGTH CKECK");
+		f.setLayout(null);
+		f.setIconImage(new ImageIcon("src\\tank.png").getImage());
+		data = new JPanel();
+		cal = new JPanel();
+		states = new JPanel();
+		data.setBorder(new TitledBorder("DATA"));
+		cal.setBorder(new TitledBorder("CAL"));
+		states.setBorder(new LineBorder(new Color(188,209,229)));
+		data.setLayout(null);
+		cal.setLayout(null);
+		
+		data.setBounds(5,50,355,238);
+		cal.setBounds(5,317,355,100);
+		states.setBounds(7,10,350,35);
+		
+		mb = new JMenuBar();
+		file = new JMenu("파일");
+		option = new JMenu("옵션");
+		help = new JMenu("도움말");
+		save = new JMenuItem("저장하기");
+		load = new JMenuItem("불러오기");
+		opt = new JMenuItem("옵션");
+		hlp = new JMenuItem("도움말");
+		
+		f.setJMenuBar(mb);
+		mb.add(file);
+		mb.add(option);
+		mb.add(help);
+		file.add(save);
+		file.add(load);
+		option.add(opt);
+		help.add(hlp);
+		
+		save.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				saveFile();
+			}
+		});
+		
+		load.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				loadFile();
+			}
+		});
+		
+		opt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				optD.setVisible(true);
+				optD.setLocation(f.getX()-7,f.getY()+100);
+			}
+		});
+		
+		hlp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				helpD.setVisible(true);
+				helpD.setLocation(f.getX()-7,f.getY()+100);
+			}
+		});
+		
+		bg = new ButtonGroup();
+		state = new JRadioButton[] {new JRadioButton("SHELL",true),new JRadioButton("근사치 HEAD"),new JRadioButton("정타원 HEAD")};
+		bg.add(state[0]);
+		bg.add(state[1]);
+		bg.add(state[2]);
+		
+		states.add(state[0]);
+		states.add(state[1]);
+		states.add(state[2]);
+		
+		lb = new JLabel[10];
+		tf = new JTextField[9];
+		for (int i=0 ; i<9 ; i++) {
+			lb[i] = new JLabel(name[i]);
+			tf[i] = new JTextField(8);
+		}
+		lb[9] = new JLabel(name[9]);
+		
+		for (int i=0 ; i<6 ; i++) {
+			lb[i].setBounds(13,i*36+25,80,20);
+			data.add(lb[i]);
+		}
+		lb[3].setSize(130,20);
+		lb[5].setSize(90,20);
+		
+		for (int i=0 ; i<5 ; i++) {
+			tf[i].setBounds(93,i*36+25,80,20);
+			data.add(tf[i]);
+		}
+		tf[3].setLocation(90,169);
+		tf[4].setLocation(120,205);
+		
+		for (int i=0 ; i<4 ; i++) {
+			lb[i+6].setBounds(183,i*36+25,80,20);
+			data.add(lb[i+6]);
+		}
+		lb[9].setLocation(183,169);
+		
+		for (int i=0 ; i<4 ; i++) {
+			tf[i+5].setBounds(263,i*36+25,80,20);
+			data.add(tf[i+5]);
+		}
+		tf[7].setBounds(209,133,135,20);
+		tf[8].setLocation(263,169);
+		
+		cbb = new JComboBox<String>(inches);
+		cbb.setBounds(263,99,79,20);
+		cbb.setMaximumRowCount(4);
+		cbb.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tf[2].setText(mm[cbb.getSelectedIndex()]+"");
+			}
+		});
+		data.add(cbb);
+		
+		ckb = new JCheckBox(" VESSEL C.L = 0",false);
+		ckb.setBounds(218,203,120,20);
+		ckb.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (ckb.isSelected()) {
+					tf[4].setText("0");
+				} else {
+					inputSomething(tf[3]);
+				}
+			}
+		});
+		data.add(ckb);
+		
+		l = new JLabel[4];
+		for (int i=0 ; i<2 ; i++) {
+			l[i] = new JLabel("L"+(i+1)+" = ");
+			l[i].setBounds(160*i+20,26,170,20);
+			cal.add(l[i]);
+		}
+		
+		for (int i=0 ; i<2 ; i++) {
+			l[i+2] = new JLabel("L"+(i+3)+" = ");
+			l[i+2].setBounds(160*i+20,61,170,20);
+			cal.add(l[i+2]);
+		}
+		
+		l_ex = new JLabel[2];
+		for (int i=0 ; i<2 ; i++) {
+			l_ex[i] = new JLabel("");
+			l_ex[i].setBounds(160*i+20,42,250,20);
+			cal.add(l_ex[i]);
+		}
+		
+		Calc = new JButton("계산하기");
+		Calc.setBounds(113,295,130,20);
+		Calc.addActionListener(this);
+		f.add(Calc);
+		
+		close = new JButton("확인");
+		popImage = new JButton("이미지 띄우기");
+		imgChoose = new JComboBox<String>();
+		imgChoose.addItem("NOZZLE");
+		imgChoose.addItem("CLIP");
+		
+		imgD = new ImgDialog[2];
+		imgD[0] = new ImgDialog(this,"NOZZLE","NOZZLE.jpg");
+		imgD[1] = new ImgDialog(this,"CLIP","CLIP.jpg");
+		optD = new OptionDialog(this,"옵션");
+		helpD = new HelpDialog(this,"도움말");
+		
+		close.setBounds(40,427,80,20);
+		popImage.setBounds(140,427,120,20);
+		imgChoose.setBounds(270,427,70,20);
+		f.add(close);
+		f.add(popImage);
+		f.add(imgChoose);
+		
+		popImage.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				imgD[imgChoose.getSelectedIndex()].setVisible(true);
+				f.setLocation(f.getX(),f.getY());
+				imgD[imgChoose.getSelectedIndex()].setLocation(f.getX()-450,f.getY());
+			}
+		});
+		
+		close.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				System.exit(0);
+			}
+		});
+		
+		f.add(data);
+		f.add(cal);
+		f.add(states);
+		
+		f.setSize(380,520);
+		f.setLocation(750,250);
+		f.setVisible(true);
+		f.setResizable(false);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		tf[0].addKeyListener(this);
+		tf[5].addKeyListener(this);
+		tf[3].addKeyListener(this);
+		tf[8].addKeyListener(this);
+		tf[4].addKeyListener(this);
+		
+		tf[0].setText("1000");
+		tf[1].setText("10");
+		tf[2].setText("21.34");
+		tf[3].setText("0");
+		tf[4].setText("0");
+		tf[5].setText("500");
+		tf[6].setText("10");
+		tf[7].setText("700");
+		tf[8].setText("0");
+	}
+
+	public void actionPerformed(ActionEvent ae) {
+		try {
+			calculate();
+			jk=0;
+		} catch (Exception e) {
+			if (jk==9) {
+				JOptionPane.showMessageDialog(this,Joke[jk],"파업",1);
+			} else {
+				JOptionPane.showMessageDialog(this,Joke[jk],"경고",1);
+				if (jk<10) jk++;
+			}
+		}
+	}
+	
+	public void keyPressed(KeyEvent ke) {}
+	public void keyTyped(KeyEvent ke) {}
+	public void keyReleased(KeyEvent ke) {
+		Object obj = ke.getSource();
+		inputSomething(obj);
+	}
+	
+	public void inputSomething(Object ob) {
+		String temp = new String();
+		int tempi = 0;
+		try {
+			if (ob == tf[0]) {				
+				tf[5].setText(Double.parseDouble(tf[0].getText())/2+"");
+				tempi = 5;
+			} else if (ob == tf[5]) {
+				tf[0].setText(Double.parseDouble(tf[5].getText())*2+"");
+				tempi = 0;
+			} else if (ob == tf[3]) {
+				tf[4].setText(Math.hypot(Double.parseDouble(tf[3].getText()), Double.parseDouble(tf[8].getText()))+"");
+				tempi = 4;
+			} else if (ob == tf[8]) {
+				tf[4].setText(Math.hypot(Double.parseDouble(tf[3].getText()), Double.parseDouble(tf[8].getText()))+"");
+				tempi = 4;
+			} else if (ob == tf[4]) {
+				tempi = 10;
+			}
+			if (tempi!=10 ) {
+				temp = tf[tempi].getText();		
+				if (temp.indexOf(".0") == temp.length()-2) {
+					tf[tempi].setText(temp.replace(".0", ""));
+				}
+				if (temp.length()-temp.indexOf('.') > 2) {
+					tf[tempi].setText(Math.round(Double.parseDouble(temp)*digitNum)/digitNum + "");
+				}
+			}
+			if (tf[4].getText().equals("")) {
+				ckb.setSelected(true);
+			} else {
+				if (Double.parseDouble(tf[4].getText())==0) {
+					ckb.setSelected(true);
+				} else {
+					ckb.setSelected(false);
+				}
+			}
+		} catch (Exception e) {}
+	}
+	
+	public void calculate() {
+		inputData();
+		if (state[0].isSelected()) calcShell(ckb.isSelected());
+		if (state[1].isSelected()) calcAppOval(ckb.isSelected());
+		if (state[2].isSelected()) calcRghtOval(ckb.isSelected());
+		outputData();
+	}
+	
+	public void inputData() {
+		d = Double.parseDouble(tf[0].getText());
+		rad = d/2;
+		stk = Double.parseDouble(tf[1].getText());
+		htk = Double.parseDouble(tf[6].getText());
+		ns = Double.parseDouble(tf[2].getText());
+		np = Double.parseDouble(tf[7].getText());
+		if (tf[4].getText().equals("")) {
+			vt=0;
+		} else {
+			vt = Double.parseDouble(tf[4].getText());
+		}
+		l_ex[0].setText("");
+		l_ex[1].setText("");
+	}
+	
+	public void outputData() {
+		for (int i=0 ; i<4 ; i++) {
+			double[] temp = new double[4];
+			temp[i] = Math.round(oL[i]*digitNum)/digitNum;
+			if (temp[i]==0) l[i].setText("L"+(i+1)+" = ");
+			else l[i].setText("L"+(i+1)+" = "+temp[i]);
+			if (l[i].getText().indexOf(".0") == l[i].getText().length()-2) {
+				l[i].setText(l[i].getText().replace(".0", ""));
+			}
+		}
+		if (state[1].isSelected()) {
+			if (temp_ex[1]==0) {
+				if (digitNum > 100) l_ex[1].setText("(LARGE ARC PART) : R" + (Math.round(temp_ex[0]*100)/100.0));
+				else l_ex[1].setText("(LARGE ARC PART) : R" + (Math.round(temp_ex[0]*digitNum)/digitNum));
+			} else {
+				if (digitNum > 100) l_ex[1].setText("(SMALL ARC PART) : r" + (Math.round(temp_ex[0]*100)/100.0));
+				else l_ex[1].setText("(SMALL ARC PART) : r" + (Math.round(temp_ex[0]*digitNum)/digitNum));
+			}
+			if (l_ex[1].getText().indexOf(".0")==l_ex[1].getText().length()-2) {
+				l_ex[1].setText(l_ex[1].getText().replace(".0", ""));
+			}
+		}
+	}
+	
+	public void calcShell(boolean b) {
+		if (b) {
+			oL[0] = np-rad-stk;
+			oL[1] = np-(pitaGY(rad,vt+ns/2));
+			oL[2] = np-(pitaGY(rad+stk,vt+ns/2));
+			oL[3] = oL[2];
+		} else {
+			oL[0] = np-pitaGY(rad+stk,vt);
+			oL[1] = np-pitaGY(rad,vt+ns/2);
+			oL[2] = np-pitaGY(rad+stk,Math.abs(vt-ns/2));
+			oL[3] = np-pitaGY(rad+stk,vt+ns/2);
+		}
+	}
+	
+	public void calcAppOval(boolean b) {
+		rad /=2;
+		double R = 0.9045*d;
+		double r = 0.1727*d;
+		double d_ex = R-rad;
+		
+		if (b) {
+			oL[0] = np-rad-htk;
+			oL[1] = np+d_ex-pitaGY(R,vt+ns/2);
+			oL[2] = np+d_ex-pitaGY(R+htk,vt);
+			oL[3] = oL[2];
+			l_ex[0].setText("(LARGE ARC PART)");
+			
+			temp_ex[0] = d*0.9045;
+			temp_ex[1] = 0;
+			
+		} else {
+			if (calcAppOval_segm(1.,0.,0)) {
+				l_ex[0].setText("(LARGE ARC PART)");
+			} else {
+				l_ex[0].setText("(SMALL ARC PART)");
+			}
+			if (calcAppOval_segm(0.,1.,1)) {
+				temp_ex[0] = d*0.9045;
+				temp_ex[1] = 0;
+			} else {				
+				temp_ex[0] = d*0.1727;
+				temp_ex[1] = 1;
+				System.out.println(temp_ex[0]+"");
+			}
+			calcAppOval_segm(1.,-1.,2);
+			calcAppOval_segm(1.,1.,3);
+		}
+	}
+	
+	public boolean calcAppOval_segm(double t, double n, int i) {
+		if ((vt+ns/2*n)/(d*0.9045+htk*t)<Math.sin(Math.toRadians(26.5675))) {
+			oL[i] = np+d*0.6545-pitaGY(d*0.9045+htk*t,Math.abs(vt+ns/2*n));
+			return true;
+		} else {
+			double vt_e = vt-(d/2-d*0.1727);
+			oL[i] = np-pitaGY(d*0.1727+htk*t,vt_e+ns/2*n);
+			return false;
+		}
+	}
+	
+	public void calcRghtOval(boolean b) {
+		double tt = (rad/2+htk)/(rad+htk);
+		if (b) {
+			oL[0] = np-(rad+htk)/2*tt;
+			oL[1] = np-0.5*pitaGY(rad,vt+ns/2);
+			oL[2] = np-pitaGY(rad+htk,vt+ns/2)*tt;
+			oL[3] = oL[2];
+		} else {
+			oL[0] = np-pitaGY(rad+htk,vt)*tt;
+			oL[1] = np-0.5*pitaGY(rad,vt+ns/2);
+			oL[2] = np-pitaGY(rad+htk,Math.abs(vt-ns/2))*tt;
+			oL[3] = np-pitaGY(rad+htk,vt+ns/2)*tt;
+		}
+	}
+	
+	public double pitaGY(double z, double x) {
+		return Math.sqrt(Math.pow(z,2)-Math.pow(x,2));
+	}
+	
+	public void saveFile() { 
+		File temp = new File("Nozzle Length Ckeck.exe");
+		FileNameExtensionFilter filter = new FileNameExtensionFilter(".txt 파일","txt");
+		JFileChooser fc = new JFileChooser(temp.getAbsoluteFile().getParent()+"\\src\\save_file");
+		fc.setFileFilter(filter);
+		fc.setSelectedFile(new File("save.txt"));
+		int i=fc.showSaveDialog(f);
+		if (i==JFileChooser.APPROVE_OPTION) {
+			try{
+				int j=0;
+				File file = fc.getSelectedFile();
+				StringBuffer str = new StringBuffer(file.getName());
+				while (!(file.createNewFile())) {
+					j++;
+					file = new File(file.getParent()+"\\"+str.substring(0,str.length()-4)+j+".txt");
+				}
+				
+				FileWriter fw = new FileWriter(file);
+				BufferedWriter bfw = new BufferedWriter(fw);
+				int[] itemNum = { 0,5,1,6,2,7,3,8,4 };				
+				
+				for (int i1=0 ; i1<3 ; i1++) {
+					if (state[i1].isSelected()) {
+						bfw.write((i1+1)+"");
+						bfw.newLine();
+						bfw.flush();
+						break;
+					}
+				}
+				for (int i1=0 ; i1<9 ; i1++) {
+					bfw.write(tf[itemNum[i1]].getText());
+					if (i1%2==0) bfw.write("  ");
+					if (i1==4) {
+						bfw.write(cbb.getSelectedItem()+"("+cbb.getSelectedIndex()+")");
+						bfw.newLine();
+					}
+					if (i1%2==1) bfw.newLine();
+					bfw.flush();					
+				}
+				
+				bfw.write(""+ckb.isSelected());
+				bfw.flush();				
+				
+				fw.close();
+				bfw.close();
+				
+				if (j==0) {
+					JOptionPane.showMessageDialog(this,"파일을 성공적으로 저장하였습니다.","알림",1);
+				} else {
+					JOptionPane.showMessageDialog(this,"같은 이름의 파일이 있어 "+str.substring(0,str.length()-4)+j+".txt"+"라는 이름으로 저장하였습니다.","알림",1);
+				}
+			} catch (IOException ie) {}
+		}
+		
+	}
+	
+	public void loadFile() {
+		File temp = new File("Nozzle Length Ckeck.exe");
+		FileNameExtensionFilter filter = new FileNameExtensionFilter(".txt 파일","txt");
+		JFileChooser fc = new JFileChooser(temp.getAbsoluteFile().getParent()+"\\src\\save_file");	
+		fc.setFileFilter(filter);
+		
+		int i=fc.showOpenDialog(f);
+		if (i==JFileChooser.APPROVE_OPTION) {
+			try {
+				String inputData = null;
+				String[] data[] = new String[6][2];
+ 				File file = fc.getSelectedFile();
+				FileReader fir = new FileReader(file);
+				BufferedReader bfr = new BufferedReader(fir);
+				
+				inputData = bfr.readLine();
+				state[Integer.parseInt(inputData)-1].setSelected(true);
+				
+				for (int i1=0 ; i1<6 ; i1++) {
+					inputData = bfr.readLine();
+					data[i1] = new String[2];
+					if (i1==3) {
+						data[i1][0] = inputData;
+						data[i1][1] = "";
+					} else { 
+						data[i1] = inputData.split("  ");
+					}
+				}
+				
+				bfr.close();
+				fir.close();
+				
+				tf[0].setText(data[0][0]);
+				tf[1].setText(data[1][0]);
+				tf[2].setText(data[2][0]);
+				tf[3].setText(data[4][0]);
+				tf[4].setText(data[5][0]);
+				tf[5].setText(data[0][1]);
+				tf[6].setText(data[1][1]);
+				tf[7].setText(data[3][0]);
+				tf[8].setText(data[4][1]);
+				
+				cbb.setSelectedIndex(Integer.parseInt(data[2][1].substring(data[2][1].indexOf('(')+1,data[2][1].indexOf(')'))));
+				ckb.setSelected(Boolean.parseBoolean(data[5][1]));
+				
+				JOptionPane.showMessageDialog(this,"파일을 성공적으로 불러왔습니다.","알림",1);
+			} catch (IOException ie) {
+				JOptionPane.showMessageDialog(this,"파일을 불러오지 못하였습니다.","알림",0);
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		LaptopJava ab = new LaptopJava();
+	}
+	
+
+	class OptionDialog extends JDialog {
+		JPanel jp = new JPanel();
+		JLabel l = new JLabel("소숫점 아래 몇째자리 까지 보이기 : ");
+		JButton bt = new JButton("확인");
+		JComboBox<String> jcb;
+		String[] list = {"0","1","2","3","4","5","6","7","8"};
+		boolean changeDigit = false;
+		
+		public OptionDialog(JFrame f,String t) {
+			super(f,t);
+			setLayout(null);
+			jp.setBorder(new TitledBorder("옵션"));
+			jcb = new JComboBox<String>(list);
+			jcb.setSelectedIndex(1);
+			jcb.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent ae) {
+					StringBuffer str = new StringBuffer(".");
+					digitNum = Math.pow(10,jcb.getSelectedIndex());
+					inputSomething(tf[0]);
+					inputSomething(tf[3]);
+					outputData();
+				}
+			});
+			jp.setLayout(null);
+			jp.setBounds(17,10,355,80);
+			l.setBounds(15,37,300,15);
+			jcb.setBounds(255,35,70,20);
+			bt.setBounds(140,100,100,25);
+			jp.add(l);
+			jp.add(jcb);
+			add(jp);
+			add(bt);
+			setSize(400,176);
+			setResizable(false);
+			setVisible(false);
+			
+			addWindowListener(new WindowAdapter() {
+				public void WindowClosing(WindowEvent we) {
+					setVisible(false);
+				}
+			});
+			
+			bt.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent ae) {
+					setVisible(false);
+				}
+			});
+		}
+	}
+}
+
+
+class ImgDialog extends JDialog {
+	JPanel jp = new JPanel();
+	JLabel img;
+	
+	public ImgDialog(JFrame f, String t, String imgN) {
+		super(f,t);
+		img = new JLabel(new ImageIcon("src\\"+imgN));
+		setLayout(new FlowLayout());
+		jp.setBorder(new TitledBorder("형상"));
+		jp.add(img);
+		add(jp);
+		setSize(550,505);
+		setResizable(false);
+		setVisible(false);
+		addWindowListener(new WindowAdapter() {
+			public void WindowClosing(WindowEvent we) {
+				setVisible(false);
+			}
+		});
+	}
+}
+
+
+class HelpDialog extends JDialog {
+	JPanel jp = new JPanel();
+	JLabel[] jl = new JLabel[4];
+	String[] str = new String[] {"- 이 프로그램은 노즐의 수치를 구하기 위해 만들어진 프로그램입니다.","- 옵션에서 소숫점 몇째짜리까지 표현할 지 정하실 수 있습니다.","- 이 프로그램의 만든이 : 원인식(MrWon)","- 잘못된 수치를 넣고 계속 계산하시면 무슨 일이 일어날 지 몰라요."};
+	public HelpDialog(JFrame f, String t) {
+		super(f,t);
+		jp.setLayout(null);
+		jp.setBorder(new TitledBorder("도움말"));
+		for (int i=0 ; i<4 ; i++) {
+			jl[i] = new JLabel(str[i]);
+			jl[i].setBounds(10,i*40+25,450,20);
+			jp.add(jl[i]);
+		}
+		
+		setLayout(new BorderLayout());
+		add(jp,BorderLayout.CENTER);
+		pack();
+		setSize(450,220);
+		setResizable(false);
+		setVisible(false);
+		addWindowListener(new WindowAdapter() {
+			public void WindowClosing(WindowEvent we) {
+				setVisible(false);
+			}
+		});
+	}
+}
+
+//-10~1290 0~760
+// 760 500
